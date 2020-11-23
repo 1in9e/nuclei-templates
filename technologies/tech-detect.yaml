@@ -2732,3 +2732,17 @@ requests:
         regex:
           - 'awselb'
         part: header
+
+      - type: word
+        name: ThinkPHP
+        words:
+          - "X-Powered-By: ThinkPHP"
+        part: header
+      
+      - type: word
+        name: ThinkPHP
+        words:
+          - ".php?s="
+          - "<b>ThinkPHP</b>"
+        condition: or
+        part: body
