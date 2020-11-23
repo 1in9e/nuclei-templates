@@ -2,7 +2,7 @@ id: open-redirect
 
 info:
   name: Open redirect Detection
-  author: melbadry9 & Elmahdi & @pxmme1337 & @Regala_ & @andirrahmani1 & geeknik
+  author: melbadry9 & Elmahdi & @pxmme1337 & @Regala_ & @andirrahmani1 & geeknik & 0hlin9e & le31ei
   severity: low
   description: A user-controlled input redirect users to an external website.
 
@@ -23,5 +23,5 @@ requests:
     matchers:
       - type: regex
         regex:
-          - '(?m)^(?:Location\s*?:\s*?)(?:https?://|//)?(?:[a-zA-Z0-9\-_]*\.)?evil\.com(?:\s*?)$'
+          - '.*Location\s*\:\s*(http|https)\:\/\/evil\.com\/.*'
         part: header
